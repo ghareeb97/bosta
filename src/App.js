@@ -8,19 +8,19 @@ import axios from 'axios';
 function App() {
   const [shipmentData, setShipmentData] = useState(null);
 
-  useEffect(() => {
-    axios.get('https://tracking.bosta.co/shipments/track/84043113')
+  const fetchShipmentData = (trackingNumber) => {
+    axios.get(`https://tracking.bosta.co/shipments/track/${trackingNumber}`)
       .then(response => {
         setShipmentData(response.data);
       })
       .catch(error => {
         console.error("There was an error fetching the shipment data!", error);
       });
-  }, []);
+  }
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar onTrack={fetchShipmentData} />
       {shipmentData ? (
         <>
           <ShipmentDetails data={{

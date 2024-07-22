@@ -8,7 +8,10 @@
     justify-content: space-between;
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
 }
 
 .navbar-logo-section {
@@ -40,4 +43,59 @@
     margin: 0 20px;
     font-size: 14px;
     font-weight: bold;
+}
+
+.navbar li:hover {
+    color: #E30613;
+    cursor: pointer;
+}
+
+.tracking-group {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.tracking-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tracking-form input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.tracking-form button {
+    background-color: #E30613;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tracking-form button:hover {
+    background-color: #c70512;
 }
