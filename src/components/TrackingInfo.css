@@ -19,6 +19,15 @@
     padding: 10px;
 }
 
+.info-address-card {
+    background-color: #F3F4F6;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 20px;
+}
+
 .dual-card {
     display: flex;
     flex-direction: column;
