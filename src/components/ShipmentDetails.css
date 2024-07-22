@@ -4,17 +4,9 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 24px;
     direction: rtl;
-    width: 80%;
+    width: 85%;
     margin: auto;
     margin-top: 100px;
-
-}
-
-.shipment-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 16px;
-    text-align: center;
 }
 
 .shipment-details-grid {

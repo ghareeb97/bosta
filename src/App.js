@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import ShipmentDetails from './components/ShipmentDetails';
+import TrackingInfo from './components/TrackingInfo';
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
           promisedDate: '١٨ يناير ٢٠٢١',
           provider: 'متجر الكتروني'
         }} />
+      <TrackingInfo />
+
     </div>
   );
 }
