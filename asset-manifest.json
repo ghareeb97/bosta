@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bosta/static/css/main.2c48d91a.css",
+    "main.js": "/bosta/static/js/main.38f8a25a.js",
+    "static/js/649.d0ab6ff1.chunk.js": "/bosta/static/js/649.d0ab6ff1.chunk.js",
+    "index.html": "/bosta/index.html",
+    "main.2c48d91a.css.map": "/bosta/static/css/main.2c48d91a.css.map",
+    "main.38f8a25a.js.map": "/bosta/static/js/main.38f8a25a.js.map",
+    "649.d0ab6ff1.chunk.js.map": "/bosta/static/js/649.d0ab6ff1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2c48d91a.css",
+    "static/js/main.38f8a25a.js"
+  ]
+}
