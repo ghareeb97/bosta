@@ -37,3 +37,7 @@
     font-weight: 600;
     color: #d9534f;
 }
+
+.shipment-progress-bar {
+    margin-top: 24px;
+}

@@ -1,9 +1,12 @@
 import React from 'react';
 import './ShipmentDetails.css';
+import ProgressBar from './ProgressBar';
 
 function ShipmentDetails({ data }) {
     const { trackingNumber, status, lastUpdate, promisedDate, provider, TransitEvents } = data;
 
+    const reasonEvent = TransitEvents.find(event => event.reason);
+    const CancellationReason = reasonEvent ? reasonEvent.reason : '';
     return (
         <div className="shipment-details-card">
             <div className="shipment-details-grid">
@@ -23,6 +26,9 @@ function ShipmentDetails({ data }) {
                     <p className="font-gray">موعد التسليم خلال</p>
                     <p className="font-semibold">{promisedDate}</p>
                 </div>
+            </div>
+            <div className="shipment-progress-bar">
+                <ProgressBar currentState={status} cancellationReason={CancellationReason} />
             </div>
         </div>
     );
