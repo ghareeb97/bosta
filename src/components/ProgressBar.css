@@ -76,5 +76,4 @@
 .progress-step.completed .progress-icon,
 .progress-step.current .progress-icon {
     color: #fff;
-    /* Adjust icon color if needed */
 }
