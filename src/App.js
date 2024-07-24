@@ -4,8 +4,16 @@ import Navbar from './components/Navbar';
 import ShipmentDetails from './components/ShipmentDetails';
 import TrackingInfo from './components/TrackingInfo';
 import axios from 'axios';
+import { useTranslation } from 'react-i18next';
+
 
 function App() {
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.body.className = i18n.language === 'ar' ? 'rtl' : 'ltr';
+  }, [i18n.language]);
+  
   const [shipmentData, setShipmentData] = useState(null);
 
   const fetchShipmentData = (trackingNumber) => {

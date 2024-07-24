@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "home": "الرئيسية",
+    "pricing": "الأسعار",
+    "contactSales": "كلم المبيعات",
+    "trackShipment": "تتبع شحنتك",
+    "login": "تسجيل الدخول",
+    "language": "ENG"
+  },
+  "shipmentDetails": {
+    "trackingNumber": "رقم الشحنة",
+    "status": "الحالة",
+    "lastUpdate": "آخر تحديث",
+    "promisedDate": "موعد التسليم",
+    "provider": "اسم التاجر"
+  },
+  "progressBar": {
+    "ticketCreated": "تم إنشاء التذكرة",
+    "receivedFromVendor": "تم الاستلام من البائع",
+    "outForDelivery": "خارج للتوصيل",
+    "delivered": "تم التوصيل"
+  },
+  "trackingInfo": {
+    "details": "تفاصيل الشحنة",
+    "branch": "الفرع",
+    "date": "التاريخ",
+    "time": "الوقت",
+    "details": "تفاصيل",
+    "delivered": "تم التوصيل",
+    "address": "العنوان غير متوفر",
+    "reportIssue": "إبلاغ عن مشكلة",
+    "help": "هل يوجد مشكلة في شحنتك؟!"
+  }
+}

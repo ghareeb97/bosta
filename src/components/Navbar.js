@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Dropdown, Input, Button, Menu } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
+import { useTranslation } from 'react-i18next';
 import './Navbar.css';
 
 const Navbar = ({ onTrack }) => {
+    const { t, i18n } = useTranslation();
     const [trackingNumber, setTrackingNumber] = useState('');
     const [searchVisible, setSearchVisible] = useState(false);
 
@@ -20,28 +22,32 @@ const Navbar = ({ onTrack }) => {
         setTrackingNumber('');
     };
 
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     const searchMenu = (
         <Menu>
             <Menu.Item key="1">
-                    <h5 className="navbar-input-title">Track your shipment</h5>
-                    <div className="ant-input-group-wrapper ant-input-search ant-input-search-with-button">
-                        <div className="ant-input-wrapper ant-input-group">
-                            <Input
-                                placeholder="Tracking No."
-                                className="ant-input"
-                                value={trackingNumber}
-                                onChange={handleInputChange}
-                                style={{ borderRadius: '5px 0 0 5px', height: '40px' }}
-                            />
-                            <Button
-                                type="primary"
-                                className="ant-input-search-button"
-                                onClick={handleSearchClick}
-                                icon={<SearchOutlined />}
-                                style={{ borderRadius: '0 5px 5px 0' }}
-                            />
-                        </div>
+                <h5 className="navbar-input-title">{t('navbar.trackShipment')}</h5>
+                <div className="ant-input-group-wrapper ant-input-search ant-input-search-with-button">
+                    <div className="ant-input-wrapper ant-input-group">
+                        <Input
+                            placeholder={t('navbar.trackShipment')}
+                            className="ant-input"
+                            value={trackingNumber}
+                            onChange={handleInputChange}
+                            style={{ borderRadius: '5px 0 0 5px', height: '40px' }}
+                        />
+                        <Button
+                            type="primary"
+                            className="ant-input-search-button"
+                            onClick={handleSearchClick}
+                            icon={<SearchOutlined />}
+                            style={{ borderRadius: '0 5px 5px 0' }}
+                        />
                     </div>
+                </div>
             </Menu.Item>
         </Menu>
     );
@@ -55,9 +61,9 @@ const Navbar = ({ onTrack }) => {
             </div>
             <div className="navbar-mid-section">
                 <ul>
-                    <li className="navbar-link">الرئيسية</li>
-                    <li className="navbar-link">الأسعار</li>
-                    <li className="navbar-link">كلم المبيعات</li>
+                    <li className="navbar-link">{t('navbar.home')}</li>
+                    <li className="navbar-link">{t('navbar.pricing')}</li>
+                    <li className="navbar-link">{t('navbar.contactSales')}</li>
                 </ul>
             </div>
             <div className="navbar-action-section">
@@ -69,13 +75,19 @@ const Navbar = ({ onTrack }) => {
                             visible={searchVisible}
                             onVisibleChange={handleSearchIconClick}
                         >
-                            <a className="ant-dropdown-trigger" onClick={e => e.preventDefault()}>
-                                تتبع شحنتك <SearchOutlined />
+                            <a className="ant-dropdown-trigger" onClick={(e) => e.preventDefault()}>
+                                {t('navbar.trackShipment')} <SearchOutlined />
                             </a>
                         </Dropdown>
                     </li>
-                    <li className="navbar-link">تسجيل الدخول</li>
-                    <li className="navbar-link" style={{ color: '#E30613' }}>ENG</li>
+                    <li className="navbar-link">{t('navbar.login')}</li>
+                    <li
+                        className="navbar-link"
+                        onClick={() => changeLanguage(i18n.language === 'en' ? 'ar' : 'en')}
+                        style={{ color: '#E30613', cursor: 'pointer' }}
+                    >
+                        {t('navbar.language')}
+                    </li>
                 </ul>
             </div>
         </nav>

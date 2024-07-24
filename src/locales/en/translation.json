@@ -1,0 +1,34 @@
+{
+  "navbar": {
+    "home": "Home",
+    "pricing": "Pricing",
+    "contactSales": "Contact Sales",
+    "trackShipment": "Track Your Shipment",
+    "login": "Login",
+    "language": "العربية"
+  },
+  "shipmentDetails": {
+    "trackingNumber": "Tracking Number",
+    "status": "Status",
+    "lastUpdate": "Last Update",
+    "promisedDate": "Promised Date",
+    "provider": "Provider"
+  },
+  "progressBar": {
+    "ticketCreated": "Ticket Created",
+    "receivedFromVendor": "Received from Vendor",
+    "outForDelivery": "Out for Delivery",
+    "delivered": "Delivered"
+  },
+  "trackingInfo": {
+    "details": "Shipment Details",
+    "branch": "Branch",
+    "date": "Date",
+    "time": "Time",
+    "details": "Details",
+    "delivered": "Delivered",
+    "address": "Address not available",
+    "reportIssue": "Report an Issue",
+    "help": "Is there a problem with your shipment?"
+  }
+}
